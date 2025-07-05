@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-playfair font-semibold">Aura Cashmere</h3>
+            <h3 className="text-2xl font-playfair font-semibold">Cloudspun Cashmere</h3>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Crafting bespoke cashmere pieces with unparalleled artistry and attention to detail. 
-              Each creation is a unique expression of luxury and personal style.
+              Crafting bespoke cashmere pieces with traditional craftsmanship, hand embroidery, and machine precision. 
+              Each creation tells your unique story through artisanal luxury.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="sm" className="text-primary-foreground hover:bg-primary-foreground/10">
@@ -100,7 +100,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-primary-foreground/80">
-            <span>&copy; 2025 Aura Cashmere. All rights reserved.</span>
+            <span>&copy; 2025 Cloudspun Cashmere. All rights reserved.</span>
             <div className="flex space-x-4">
               <Link to="/terms" className="hover:text-primary-foreground transition-colors">
                 Terms of Service

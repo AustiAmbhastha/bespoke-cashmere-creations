@@ -39,13 +39,14 @@ const CustomInquiry = () => {
       <section className="relative py-24 bg-luxury-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-              Begin Your Custom Design
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Share your vision with us through this detailed inquiry form. We'll personally contact you 
-              within 24 hours to discuss your bespoke creation.
-            </p>
+                <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
+                  Begin Your Bespoke Journey
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  Begin your bespoke cashmere journey with a <span className="font-semibold text-primary">US $50 deposit</span>. 
+                  Choose hand-embroidery, machine embroidery, or both—including beloved pet portraits or custom artwork. 
+                  We'll send your personalized estimate within 24 hours.
+                </p>
           </div>
         </div>
       </section>
@@ -133,12 +134,26 @@ const CustomInquiry = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="personalization">Personalization Details</Label>
+                      <Label htmlFor="personalization">Personalization & Embroidery Details</Label>
                       <Textarea 
                         id="personalization" 
-                        placeholder="Any embroidery, monograms, special patterns, or text you'd like included..."
-                        className="min-h-24"
+                        placeholder="Hand embroidery, machine embroidery, or both? Include details about beloved pets, family crests, names, dates, or custom artwork you'd like featured..."
+                        className="min-h-32"
                       />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="embroideryType">Embroidery Preference</Label>
+                      <Select>
+                        <SelectTrigger className="h-12">
+                          <SelectValue placeholder="Select your preferred embroidery style" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="hand-embroidery">Hand Embroidery (Traditional Craftsmanship)</SelectItem>
+                          <SelectItem value="machine-embroidery">Machine Embroidery (Precise Details)</SelectItem>
+                          <SelectItem value="both">Both Hand & Machine Embroidery</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
 
@@ -185,10 +200,10 @@ const CustomInquiry = () => {
                             <SelectValue placeholder="Select your investment range" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="500-1000">$500 - $1,000</SelectItem>
-                            <SelectItem value="1000-2000">$1,000 - $2,000</SelectItem>
-                            <SelectItem value="2000-5000">$2,000 - $5,000</SelectItem>
-                            <SelectItem value="5000+">$5,000+</SelectItem>
+                            <SelectItem value="200-400">$200 - $400</SelectItem>
+                            <SelectItem value="400-600">$400 - $600</SelectItem>
+                            <SelectItem value="600-900">$600 - $900</SelectItem>
+                            <SelectItem value="900-1200">$900 - $1,200</SelectItem>
                             <SelectItem value="discuss">Prefer to discuss</SelectItem>
                           </SelectContent>
                         </Select>
@@ -237,10 +252,11 @@ const CustomInquiry = () => {
                       disabled={isSubmitting}
                       className="luxury-button w-full md:w-auto px-12 py-4 text-lg"
                     >
-                      {isSubmitting ? "Submitting..." : "Submit My Inquiry"}
+                      {isSubmitting ? "Processing..." : "Submit & Pay $50 Deposit"}
                     </Button>
                     <p className="text-sm text-muted-foreground mt-4">
-                      We'll contact you within 24 hours to begin your bespoke journey.
+                      After submitting, you'll be redirected to secure Stripe payment for your $50 deposit. 
+                      We'll send your personalized estimate within 24 hours.
                     </p>
                   </div>
                 </form>

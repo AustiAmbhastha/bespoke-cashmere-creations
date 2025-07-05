@@ -13,7 +13,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="text-2xl md:text-3xl font-playfair font-semibold text-primary">
-              Aura Cashmere
+              Cloudspun Cashmere
             </div>
           </Link>
 

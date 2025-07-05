@@ -8,50 +8,50 @@
 
 @layer base {
   :root {
-    /* Luxury Cashmere Color Palette */
-    --background: 32 25% 97%;
-    --foreground: 25 25% 15%;
+    /* Cloudspun Cashmere Premium Color Palette */
+    --background: 44 18% 98%; /* Ivory #FAF9F6 */
+    --foreground: 0 0% 20%; /* Charcoal #333333 */
 
-    --card: 32 25% 98%;
-    --card-foreground: 25 25% 15%;
+    --card: 44 18% 99%;
+    --card-foreground: 0 0% 20%;
 
-    --popover: 32 25% 98%;
-    --popover-foreground: 25 25% 15%;
+    --popover: 44 18% 99%;
+    --popover-foreground: 0 0% 20%;
 
-    /* Warm cashmere-inspired primary */
-    --primary: 25 35% 25%;
-    --primary-foreground: 32 25% 97%;
+    /* Muted Gold Primary */
+    --primary: 45 65% 52%; /* Muted Gold #D4AF37 */
+    --primary-foreground: 44 18% 98%;
 
-    /* Soft cream secondary */
-    --secondary: 32 20% 92%;
-    --secondary-foreground: 25 25% 15%;
+    /* Charcoal Secondary */
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 44 18% 98%;
 
-    /* Muted warm tones */
-    --muted: 32 15% 88%;
-    --muted-foreground: 25 15% 45%;
+    /* Subtle tones */
+    --muted: 44 10% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Elegant accent */
-    --accent: 35 25% 85%;
-    --accent-foreground: 25 25% 15%;
+    /* Gold accent variations */
+    --accent: 45 45% 88%;
+    --accent-foreground: 0 0% 20%;
 
     --destructive: 0 65% 51%;
-    --destructive-foreground: 32 25% 97%;
+    --destructive-foreground: 44 18% 98%;
 
-    --border: 32 15% 85%;
-    --input: 32 15% 85%;
-    --ring: 25 35% 25%;
+    --border: 44 8% 90%;
+    --input: 44 8% 90%;
+    --ring: 45 65% 52%;
 
     --radius: 0.75rem;
 
-    /* Luxury gradients */
-    --gradient-luxury: linear-gradient(135deg, hsl(32 25% 97%), hsl(35 20% 94%));
-    --gradient-cashmere: linear-gradient(135deg, hsl(25 35% 25%), hsl(30 30% 35%));
-    --gradient-soft: linear-gradient(180deg, hsl(32 25% 98%), hsl(32 20% 95%));
+    /* Premium gradients with new palette */
+    --gradient-luxury: linear-gradient(135deg, hsl(44 18% 98%), hsl(45 25% 95%));
+    --gradient-cashmere: linear-gradient(135deg, hsl(45 65% 52%), hsl(45 55% 45%));
+    --gradient-soft: linear-gradient(180deg, hsl(44 18% 99%), hsl(44 12% 96%));
 
-    /* Elegant shadows */
-    --shadow-luxury: 0 20px 40px -12px hsl(25 35% 25% / 0.15);
-    --shadow-soft: 0 8px 25px -8px hsl(25 35% 25% / 0.12);
-    --shadow-glow: 0 0 30px hsl(35 25% 85% / 0.4);
+    /* Elegant shadows with charcoal */
+    --shadow-luxury: 0 20px 40px -12px hsl(0 0% 20% / 0.15);
+    --shadow-soft: 0 8px 25px -8px hsl(0 0% 20% / 0.12);
+    --shadow-glow: 0 0 30px hsl(45 45% 88% / 0.4);
 
     /* Premium animations */
     --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

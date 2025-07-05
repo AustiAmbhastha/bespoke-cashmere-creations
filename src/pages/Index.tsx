@@ -20,12 +20,18 @@ const Index = () => {
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-primary leading-tight">
                   Your Vision,
                   <br />
-                  <span className="text-muted-foreground">Our Craft</span>
+                  <span className="text-foreground">Our Craft</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-                  Experience the luxury of bespoke cashmere. Each piece is meticulously handcrafted 
-                  to your unique specifications, creating timeless heirlooms that tell your story.
+                  Experience the luxury of bespoke cashmere at Cloudspun. Each piece is meticulously handcrafted 
+                  to your unique specifications—from hand embroidery to machine details—creating timeless heirlooms 
+                  that tell your personal story.
                 </p>
+                <div className="text-sm text-muted-foreground bg-card/50 p-4 rounded-lg border border-border">
+                  <p className="font-medium text-primary mb-2">Premium Investment Range: $200 - $1,200 USD</p>
+                  <p>Begin your bespoke cashmere journey with a <span className="font-semibold text-primary">$50 USD deposit</span> 
+                  to receive your personalized design proposal and detailed estimate.</p>
+                </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -143,17 +149,17 @@ const Index = () => {
             {[
               {
                 title: "Bespoke Shawls",
-                description: "Luxurious shawls tailored to your style and preferences",
+                description: "Hand-embroidered shawls with your personal designs—beloved pets, family crests, or custom artwork",
                 image: "photo-1581091226825-a6a2a5aee158"
               },
               {
                 title: "Custom Baby Blankets", 
-                description: "Gentle, personalized comfort for life's most precious moments",
+                description: "Machine and hand-embroidered blankets in cloud-soft cashmere with personalized names and dates",
                 image: "photo-1721322800607-8c38375eef04"
               },
               {
                 title: "Personalized Baby Clothes",
-                description: "Precious garments crafted with love for precious little ones",
+                description: "Heirloom-quality garments with traditional craftsmanship and delicate hand-finished details",
                 image: "photo-1486312338219-ce68d2c6f44d"
               }
             ].map((creation, index) => (

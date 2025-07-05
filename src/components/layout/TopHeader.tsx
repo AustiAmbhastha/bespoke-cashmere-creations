@@ -10,11 +10,11 @@ const TopHeader = () => {
         </div>
         <div className="flex items-center space-x-4">
           <a 
-            href="mailto:hello@auracashmere.com" 
+            href="mailto:hello@cloudspuncashmere.com" 
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
             <Mail className="h-4 w-4" />
-            <span className="hidden sm:inline font-light">hello@auracashmere.com</span>
+            <span className="hidden sm:inline font-light">hello@cloudspuncashmere.com</span>
           </a>
           <span className="hidden lg:inline font-light">Custom Orders: 4-6 Weeks</span>
         </div>
