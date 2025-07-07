@@ -8,25 +8,31 @@ import Footer from "@/components/layout/Footer";
 const BespokeShawls = () => {
   const shawlStyles = [
     {
-      name: "Classic Wrap",
-      description: "Timeless elegance in its purest form. A luxurious oversized shawl perfect for any occasion.",
-      features: ["70\" x 28\" dimensions", "Hand-finished edges", "Custom embroidery options", "Choice of 12 colors"],
-      startingPrice: "Starting from $1,200",
-      image: "photo-1581091226825-a6a2a5aee158"
+      name: "Memory Keeper",
+      description: "Where beloved pets live forever in thread. Our artisans spend 15-20 hours hand-embroidering your companion's portrait with photo-realistic precision, capturing the soul behind the eyes that made your heart home.",
+      features: ["Pet Portrait Embroidery", "Hand-Finished Edges", "Swiss Precision Threading", "Generational Heirloom Quality"],
+      startingPrice: "Investment: $450 - $1,200",
+      image: "photo-1581091226825-a6a2a5aee158",
+      story: "From shelter rescues to championship bloodlines—every pet deserves immortality",
+      artisan: "Elena Marchetti specializes in capturing the gentle wisdom in senior dog eyes"
     },
     {
-      name: "Travel Companion", 
-      description: "Designed for the discerning traveler. Lightweight yet warm, with a sophisticated drape.",
-      features: ["60\" x 24\" dimensions", "Ultra-fine cashmere", "Packable design", "Wrinkle-resistant"],
-      startingPrice: "Starting from $950",
-      image: "photo-1649972904349-6e44c42644a7"
+      name: "Heritage Wrap", 
+      description: "Transform family crests, wedding dress lace, or childhood blanket patterns into luxury cashmere. Our heritage consultants help translate generational treasures into modern masterpieces that honor your lineage.",
+      features: ["Family Crest Restoration", "Wedding Dress Elements", "Generational Pattern Recreation", "Archive-Quality Photography"],
+      startingPrice: "Investment: $350 - $950",
+      image: "photo-1649972904349-6e44c42644a7",
+      story: "When grandmothers pass down more than recipes—they pass down art",
+      artisan: "Isabella Chen specializes in translating family history into textile art"
     },
     {
-      name: "Evening Elegance",
-      description: "For special occasions that demand sophistication. Features delicate metallic threads.",
-      features: ["72\" x 30\" dimensions", "Metallic accent threads", "Formal occasions", "Gift presentation"],
-      startingPrice: "Starting from $1,800",
-      image: "photo-1486312338219-ce68d2c6f44d"
+      name: "Celebration Shawl",
+      description: "Mark life's sacred moments with artisanal luxury. Hand-embroidered birth flowers, anniversary dates, or memorial symbols using traditional techniques perfected over centuries by master craftspeople.",
+      features: ["Birth Flower Embroidery", "Sacred Date Integration", "Memorial Symbol Work", "Ceremonial Presentation"],
+      startingPrice: "Investment: $500 - $1,500",
+      image: "photo-1486312338219-ce68d2c6f44d",
+      story: "Some moments are too precious for mass production",
+      artisan: "Marcus Aberdeen combines machine precision with hand-finished soul"
     }
   ];
 
@@ -40,12 +46,20 @@ const BespokeShawls = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-              Bespoke Shawls
+              Where Beloved Memories Live Forever
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Embrace timeless elegance with our handcrafted cashmere shawls. 
-              Each piece is tailored to your personal style and crafted to last generations.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+              Your rescue dog's gentle eyes, hand-embroidered with museum-quality precision. Your grandmother's 
+              wedding ring pattern, recreated in golden cashmere thread. Each shawl becomes a wearable sanctuary 
+              of memory, crafted by artisans who understand that luxury isn't about price—it's about preserving souls.
             </p>
+            <div className="bg-card/50 p-6 rounded-lg border border-border">
+              <p className="text-sm text-muted-foreground italic">
+                "We don't just embroider pets—we capture their spirit. The way Bella tilted her head, 
+                how Max's ears perked up. Every stitch honors the love that made them family."
+              </p>
+              <p className="mt-2 text-primary font-medium">— Isabella Chen, Pet Portrait Specialist</p>
+            </div>
           </div>
         </div>
       </section>

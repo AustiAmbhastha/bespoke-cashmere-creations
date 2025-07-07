@@ -8,25 +8,31 @@ import Footer from "@/components/layout/Footer";
 const OurCreations = () => {
   const creations = [
     {
-      title: "Bespoke Shawls",
-      description: "Luxurious shawls tailored to your individual style and preferences. Each piece is crafted with the finest cashmere and personalized details.",
+      title: "Heritage Shawls",
+      description: "Where your beloved pet's portrait becomes eternal art, hand-embroidered by master artisans who've spent decades perfecting photo-realistic cashmere embroidery. Each shawl transforms precious memories into luxury heirlooms.",
       image: "photo-1581091226825-a6a2a5aee158",
       link: "/creations/shawls",
-      features: ["Custom Colors", "Personalized Embroidery", "Choice of Patterns", "Premium Cashmere"]
+      features: ["Pet Portrait Embroidery", "Family Crest Restoration", "Swiss Machine Precision", "200-Year Scottish Techniques"],
+      investment: "$350 - $1,200",
+      story: "From rescue dog photos to grandmother's locket—we embroider your heart onto cashmere"
     },
     {
-      title: "Custom Baby Blankets",
-      description: "Gentle, cloud-soft blankets that provide comfort and warmth for life's most precious moments. Perfect for gifting or treasuring.",
-      image: "photo-1721322800607-8c38375eef04",
+      title: "Memory Baby Blankets",
+      description: "Transform childhood photographs, wedding dress lace, or family patterns into ultra-soft cashmere blankets. Our artisans weave generational stories into each fiber, creating treasures that become family legends.",
+      image: "photo-1721322800607-8c38375eef04", 
       link: "/creations/baby-blankets",
-      features: ["Ultra-Soft Cashmere", "Custom Sizing", "Personalized Names", "Gift Packaging"]
+      features: ["Photo-to-Thread Technology", "Wedding Dress Elements", "Generational Patterns", "Heirloom Packaging"],
+      investment: "$280 - $850",
+      story: "When parents bring us their baby's first photo, magic begins"
     },
     {
-      title: "Personalized Baby Clothes",
-      description: "Exquisite garments for precious little ones, crafted with love and attention to the finest details for ultimate comfort.",
+      title: "Legacy Baby Clothes",
+      description: "Miniature masterpieces that honor family traditions. Hand-sewn details recreate christening gown elements, incorporate meaningful symbols, or feature delicate pet silhouettes—luxury that grows with your family's story.",
       image: "photo-1486312338219-ce68d2c6f44d",
-      link: "/creations/baby-clothes",
-      features: ["Gentle Materials", "Custom Fit", "Embroidered Details", "Heirloom Quality"]
+      link: "/creations/baby-clothes", 
+      features: ["Christening Recreations", "Pet Silhouettes", "Family Symbol Integration", "Gentle Hand-Finishing"],
+      investment: "$200 - $650",
+      story: "Every tiny garment carries the weight of family love"
     }
   ];
 
@@ -40,12 +46,20 @@ const OurCreations = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-              Our Creations
+              Where Memory Becomes Masterpiece
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Discover our collection of bespoke cashmere pieces. Each creation is a unique expression 
-              of luxury, crafted entirely to your specifications with uncompromising attention to detail.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+              Each creation begins with your story—a beloved pet's portrait hand-embroidered into cashmere, 
+              family crests restored with museum-quality precision, or childhood memories transformed into luxury heirlooms. 
+              This is why discerning clients invest $200-$1,200 in Cloudspun artistry.
             </p>
+            <div className="bg-card/50 p-6 rounded-lg border border-border">
+              <p className="text-sm text-muted-foreground italic">
+                "When mass-produced luxury feels hollow, our artisans create pieces that carry your soul. 
+                Each stitch tells your story, each thread connects generations."
+              </p>
+              <p className="mt-2 text-primary font-medium">— Master Artisan Collection</p>
+            </div>
           </div>
         </div>
       </section>
@@ -64,15 +78,25 @@ const OurCreations = () => {
                     <p className="text-lg text-muted-foreground leading-relaxed">
                       {creation.description}
                     </p>
+                    <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
+                      <p className="text-primary font-medium text-sm italic">
+                        "{creation.story}"
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4">
-                    {creation.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-sm text-muted-foreground">{feature}</span>
-                      </div>
-                    ))}
+                  <div className="space-y-4">
+                    <div className="text-2xl font-playfair font-semibold text-primary">
+                      Investment: {creation.investment}
+                    </div>
+                    <div className="grid grid-cols-1 gap-3">
+                      {creation.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <span className="text-sm font-medium text-foreground">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">

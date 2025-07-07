@@ -16,12 +16,20 @@ const PersonalizedBabyClothes = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-              Personalized Baby Clothes
+              Tiny Treasures, Timeless Artistry
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Dress your little one in personalized luxury. Our baby clothes collection features 
-              the softest cashmere crafted into precious garments for precious moments.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+              Miniature masterpieces that honor family traditions. Each garment features hand-sewn details 
+              that recreate christening gown elements, incorporate meaningful family symbols, or feature 
+              delicate pet silhouettes—artisanal luxury that grows with your family's story.
             </p>
+            <div className="bg-card/50 p-6 rounded-lg border border-border">
+              <p className="text-sm text-muted-foreground italic">
+                "Every tiny stitch carries the weight of generational love. We create clothes that become 
+                family legends, passed down with the stories they embody."
+              </p>
+              <p className="mt-2 text-primary font-medium">— Heritage Design Specialist</p>
+            </div>
           </div>
         </div>
       </section>
@@ -42,14 +50,43 @@ const PersonalizedBabyClothes = () => {
             
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-playfair font-bold text-primary">
-                Gentle Luxury
+                Where Family Legacy Meets Gentle Luxury
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Each garment is designed with your baby's comfort in mind, featuring soft seams, 
-                gentle fabrics, and thoughtful details that make dressing easy for parents.
+                Our master seamstresses recreate great-grandmother's christening gown details in modern comfort, 
+                embroider beloved pet silhouettes with tender precision, or integrate family crests into tiny 
+                garments. Each piece becomes a wearable connection to your family's unique story.
               </p>
+              <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
+                <p className="text-primary font-medium text-sm italic">
+                  "When families trust us with their most precious memories, we honor that with our finest artistry"
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="text-xl font-playfair font-semibold text-primary">
+                  Investment: $200 - $650
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm font-medium text-foreground">Christening Gown Recreation</span>
+                  </div>
+                  <div className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm font-medium text-foreground">Pet Portrait Integration</span>
+                  </div>
+                  <div className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm font-medium text-foreground">Family Symbol Embroidery</span>
+                  </div>
+                  <div className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm font-medium text-foreground">Hand-Finished Seams</span>
+                  </div>
+                </div>
+              </div>
               <Button asChild className="luxury-button">
-                <Link to="/inquiry">Design Baby Clothes</Link>
+                <Link to="/inquiry">Create Legacy Garment</Link>
               </Button>
             </div>
           </div>

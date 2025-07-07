@@ -9,37 +9,37 @@ const BespokeProcess = () => {
   const processSteps = [
     {
       step: "01",
-      title: "Inquiry & Consultation",
-      description: "Begin your journey by sharing your vision through our detailed inquiry form. We'll personally contact you to discuss your requirements, preferences, and any special details.",
+      title: "Soul-Deep Consultation",
+      description: "Share your story with us—your beloved pet's quirks, your grandmother's treasured jewelry, or your family's generational patterns. Our heritage design consultant helps translate precious memories into embroidery-ready art.",
       details: [
-        "Complete our comprehensive design questionnaire",
-        "Share inspiration images and color preferences", 
-        "Receive personalized consultation within 24 hours",
-        "Discuss timeline, materials, and customization options"
+        "Submit $50 booking deposit to secure consultation slot",
+        "Share high-resolution photos and emotional context",
+        "Receive personalized artisan assignment within 24 hours", 
+        "Discuss hand vs. machine embroidery for your vision"
       ],
       duration: "24-48 hours"
     },
     {
       step: "02",
-      title: "Design, Quote & Deposit",
-      description: "Based on our consultation, we'll create a detailed design proposal with pricing. Once approved, secure your creation with a 50% deposit to begin the crafting process.",
+      title: "Artisan Design & Investment",
+      description: "Your assigned master artisan creates detailed sketches showing how your pet's eyes will catch light in thread, or how your family crest will translate to cashmere. Investment ranges $200-$1,200 depending on complexity.",
       details: [
-        "Receive detailed design proposal and sketches",
-        "Review comprehensive quote with material breakdown",
-        "Approve final design and specifications",
-        "Submit 50% deposit to begin creation"
+        "Receive hand-drawn design sketches from your artisan",
+        "Review detailed quote explaining each artistic element",
+        "Choose between hand embroidery (soul) or machine precision (detail)",
+        "Approve final design and submit remaining investment"
       ],
       duration: "2-3 days"
     },
     {
       step: "03", 
-      title: "Creation & Craftsmanship",
-      description: "Our master artisans begin handcrafting your piece with meticulous attention to every detail. We'll keep you updated throughout the creation process.",
+      title: "Sacred Crafting Period",
+      description: "Your artisan enters the sacred space where time stops. Watch through progress photos as your pet's personality emerges in thread, or your family pattern takes shape using techniques passed down through generations.",
       details: [
-        "Sourcing of premium cashmere materials",
-        "Hand-weaving and crafting by skilled artisans",
-        "Quality control at every stage",
-        "Progress updates and photos"
+        "Sourcing ethically-sourced Mongolian cashmere fibers",
+        "Hand or machine embroidery by your dedicated artisan",
+        "Weekly progress photos showing your story taking form",
+        "Quality control by our master craftspeople council"
       ],
       duration: "4-6 weeks"
     },
@@ -67,12 +67,20 @@ const BespokeProcess = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-              The Bespoke Process
+              Where Time Becomes Luxury
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Every creation begins with your vision and evolves through our meticulous four-step process. 
-              From initial consultation to final delivery, we ensure perfection at every stage.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+              4-6 weeks isn't delay—it's devotion. While fast fashion churns out thousands, our master artisans 
+              spend days perfecting a single embroidered whisker on your pet's portrait or matching the exact 
+              shade of your grandmother's wedding ring in cashmere thread.
             </p>
+            <div className="bg-card/50 p-6 rounded-lg border border-border">
+              <p className="text-sm text-muted-foreground italic">
+                "Each commission is a sacred trust. When clients bring us their late dog's favorite toy or their 
+                newborn's hospital bracelet, we understand we're not just crafting cashmere—we're preserving souls."
+              </p>
+              <p className="mt-2 text-primary font-medium">— Elena Marchetti, Master Artisan</p>
+            </div>
           </div>
         </div>
       </section>
