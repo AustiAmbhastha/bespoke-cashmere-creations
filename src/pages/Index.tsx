@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import TopHeader from "@/components/layout/TopHeader";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/ui/whatsapp-button";
 
 const Index = () => {
   return (
@@ -34,13 +35,14 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild className="luxury-button text-lg px-8 py-6">
                   <Link to="/inquiry">Begin Your Custom Design</Link>
                 </Button>
                 <Button variant="outline" asChild className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg">
                   <Link to="/process">Discover Our Process</Link>
                 </Button>
+                <WhatsAppButton phoneNumber="+919718807399" className="px-8 py-6 text-lg" />
               </div>
               
               <div className="flex items-center space-x-8 text-sm text-muted-foreground">

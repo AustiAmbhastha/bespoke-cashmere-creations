@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import TopHeader from "@/components/layout/TopHeader";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/ui/whatsapp-button";
 
 const CustomInquiry = () => {
   const { toast } = useToast();
@@ -247,13 +248,20 @@ const CustomInquiry = () => {
 
                   {/* Submit Button */}
                   <div className="pt-6">
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="luxury-button w-full md:w-auto px-12 py-4 text-lg"
-                    >
-                      {isSubmitting ? "Processing..." : "Submit & Pay $50 Deposit"}
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Button 
+                        type="submit" 
+                        disabled={isSubmitting}
+                        className="luxury-button px-12 py-4 text-lg"
+                      >
+                        {isSubmitting ? "Processing..." : "Submit & Pay $50 Deposit"}
+                      </Button>
+                      <WhatsAppButton 
+                        phoneNumber="+919718807399" 
+                        message="Hello! I have questions about placing a bespoke cashmere order."
+                        className="px-12 py-4 text-lg"
+                      />
+                    </div>
                     <p className="text-sm text-muted-foreground mt-4">
                       After submitting, you'll be redirected to secure Stripe payment for your $50 deposit. 
                       We'll send your personalized estimate within 24 hours.
