@@ -101,12 +101,15 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-primary-foreground/80">
             <span>&copy; 2025 Cloudspun Cashmere. All rights reserved.</span>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
               <Link to="/terms" className="hover:text-primary-foreground transition-colors">
                 Terms of Service
               </Link>
               <Link to="/privacy" className="hover:text-primary-foreground transition-colors">
                 Privacy Policy
+              </Link>
+              <Link to="/return-refund" className="hover:text-primary-foreground transition-colors">
+                Return & Refund
               </Link>
             </div>
           </div>

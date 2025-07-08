@@ -97,6 +97,17 @@ const Navigation = ({ mobile = false, onItemClick }: NavigationProps) => {
         >
           Contact
         </Link>
+        
+        <Link 
+          to="/blog" 
+          className={cn(
+            "text-lg font-medium transition-colors hover:text-primary",
+            location.pathname === "/blog" ? "text-primary" : "text-foreground"
+          )}
+          onClick={onItemClick}
+        >
+          Blog
+        </Link>
       </nav>
     );
   }
@@ -220,6 +231,18 @@ const Navigation = ({ mobile = false, onItemClick }: NavigationProps) => {
             )}
           >
             <Link to="/contact">Contact</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink 
+            asChild
+            className={cn(
+              "font-medium transition-colors hover:text-primary",
+              location.pathname === "/blog" ? "text-primary" : "text-foreground"
+            )}
+          >
+            <Link to="/blog">Blog</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
