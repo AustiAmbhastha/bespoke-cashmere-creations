@@ -6,10 +6,10 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const OurCreations = () => {
-  const collections = [
+const collections = [
     {
       title: "Shawls & Wraps",
-      description: "Luxury drapes for elegance and warmth, often featuring bespoke embroidery that transforms your most precious memories into wearable art.",
+      description: "Luxury drapes for elegance and warmth, often featuring bespoke embroidery.",
       image: "photo-1581091226825-a6a2a5aee158",
       link: "/creations/shawls",
       investment: "$350 - $1,200",
@@ -20,7 +20,7 @@ const OurCreations = () => {
         },
         {
           name: "The Artisanal Embroidered Shawl",
-          description: "Our signature offering. A classic woven shawl that serves as a canvas for bespoke, hand-guided embroidery, tailored to your vision."
+          description: "Our signature offering. A classic woven shawl that serves as a canvas for bespoke, hand-guided embroidery, tailored to the client's vision."
         },
         {
           name: "The Featherlight Lace-Knit Shawl",
@@ -34,7 +34,7 @@ const OurCreations = () => {
     },
     {
       title: "Blankets & Throws",
-      description: "Substantial, soft, and designed to be a centerpiece of comfort in any home. Each piece becomes a treasured family heirloom.",
+      description: "Substantial, soft, and designed to be a centerpiece of comfort in any home.",
       image: "photo-1649972904349-6e44c42644a7",
       link: "/creations/blankets",
       investment: "$450 - $1,500",
@@ -59,7 +59,7 @@ const OurCreations = () => {
     },
     {
       title: "Baby Blankets",
-      description: "The softest touch for the most delicate skin, crafted to become cherished keepsakes that grow with your family's story.",
+      description: "The softest touch for the most delicate skin, crafted to become cherished keepsakes.",
       image: "photo-1721322800607-8c38375eef04",
       link: "/creations/baby-blankets",
       investment: "$280 - $850",
@@ -84,14 +84,14 @@ const OurCreations = () => {
     },
     {
       title: "Baby Apparel & Gift Sets",
-      description: "A collection of foundational pieces for a baby's first wardrobe, embodying purity and softness in every stitch.",
+      description: "A collection of foundational pieces for a baby's first wardrobe, embodying purity and softness.",
       image: "photo-1486312338219-ce68d2c6f44d",
       link: "/creations/baby-clothes",
       investment: "$150 - $650",
       products: [
         {
-          name: "The Welcome Home Set",
-          description: "The ultimate heirloom gift including a hand-finished cardigan with mother-of-pearl buttons, matching baby booties, and a classic little bonnet."
+          name: "The Welcome Home Set (Gift Set)",
+          description: "The ultimate heirloom gift. This curated set includes: A hand-finished Cardigan with mother-of-pearl buttons, A pair of matching Baby Booties, A classic Little Bonnet or Beanie."
         },
         {
           name: "The Heirloom Capelet",
@@ -102,8 +102,12 @@ const OurCreations = () => {
           description: "A one-piece outfit with simple fastenings, enveloping the baby in head-to-toe cashmere comfort."
         },
         {
-          name: "Cashmere Baby Accessories",
-          description: "Soft socks, booties, and tiny mittens designed to stay on little feet and protect delicate skin with incredible warmth."
+          name: "Cashmere Baby Socks & Booties",
+          description: "Soft, warm, and designed to stay on little feet. Sold separately or in gift sets."
+        },
+        {
+          name: "Tiny Mittens",
+          description: "To protect delicate skin, these soft mittens are gentle on the wrist and incredibly warm."
         }
       ]
     }
