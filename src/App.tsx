@@ -19,6 +19,8 @@ import Shipping from "./pages/Shipping";
 import CashmereCarе from "./pages/CashmereCare";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import ReturnRefund from "./pages/ReturnRefund";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +47,9 @@ const App = () => (
           <Route path="/care" element={<CashmereCarе />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/return-refund" element={<ReturnRefund />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Blog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

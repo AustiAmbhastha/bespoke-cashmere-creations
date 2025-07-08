@@ -6,33 +6,106 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const OurCreations = () => {
-  const creations = [
+  const collections = [
     {
-      title: "Heritage Shawls",
-      description: "Where your beloved pet's portrait becomes eternal art, hand-embroidered by master artisans who've spent decades perfecting photo-realistic cashmere embroidery. Each shawl transforms precious memories into luxury heirlooms.",
+      title: "Shawls & Wraps",
+      description: "Luxury drapes for elegance and warmth, often featuring bespoke embroidery that transforms your most precious memories into wearable art.",
       image: "photo-1581091226825-a6a2a5aee158",
       link: "/creations/shawls",
-      features: ["Pet Portrait Embroidery", "Family Crest Restoration", "Swiss Machine Precision", "200-Year Scottish Techniques"],
       investment: "$350 - $1,200",
-      story: "From rescue dog photos to grandmother's locket—we embroider your heart onto cashmere"
+      products: [
+        {
+          name: "The Reversible Heirloom Shawl",
+          description: "A dual-sided masterpiece woven from two complementary shades of cashmere. Incredibly versatile, offering two distinct looks in one."
+        },
+        {
+          name: "The Artisanal Embroidered Shawl",
+          description: "Our signature offering. A classic woven shawl that serves as a canvas for bespoke, hand-guided embroidery, tailored to your vision."
+        },
+        {
+          name: "The Featherlight Lace-Knit Shawl",
+          description: "An exquisitely delicate shawl featuring intricate, open-knit patterns. Perfect for temperate evenings or as a sophisticated bridal accessory."
+        },
+        {
+          name: "The Signature Pashmina Stole",
+          description: "A timeless, generously sized wrap made from the finest pashmina cashmere, finished with hand-twisted tassels."
+        }
+      ]
     },
     {
-      title: "Memory Baby Blankets",
-      description: "Transform childhood photographs, wedding dress lace, or family patterns into ultra-soft cashmere blankets. Our artisans weave generational stories into each fiber, creating treasures that become family legends.",
-      image: "photo-1721322800607-8c38375eef04", 
+      title: "Blankets & Throws",
+      description: "Substantial, soft, and designed to be a centerpiece of comfort in any home. Each piece becomes a treasured family heirloom.",
+      image: "photo-1649972904349-6e44c42644a7",
+      link: "/creations/blankets",
+      investment: "$450 - $1,500",
+      products: [
+        {
+          name: "The Heirloom Woven Blanket",
+          description: "A dense, exceptionally soft blanket woven from pure cashmere, featuring a classic border. Designed to be passed down through generations."
+        },
+        {
+          name: "The Classic Cable Knit Throw",
+          description: "A thick, cozy blanket featuring traditional cable knit patterns for a touch of rustic elegance and unparalleled warmth."
+        },
+        {
+          name: "The Herringbone Weave Blanket",
+          description: "A sophisticated and durable blanket with a timeless herringbone pattern, adding texture and classic style to any interior."
+        },
+        {
+          name: "The Bespoke Monogrammed Blanket",
+          description: "A personalized heirloom where clients can have initials, family crests, or significant dates delicately embroidered onto a corner."
+        }
+      ]
+    },
+    {
+      title: "Baby Blankets",
+      description: "The softest touch for the most delicate skin, crafted to become cherished keepsakes that grow with your family's story.",
+      image: "photo-1721322800607-8c38375eef04",
       link: "/creations/baby-blankets",
-      features: ["Photo-to-Thread Technology", "Wedding Dress Elements", "Generational Patterns", "Heirloom Packaging"],
       investment: "$280 - $850",
-      story: "When parents bring us their baby's first photo, magic begins"
+      products: [
+        {
+          name: "The Cherish Receiving Blanket",
+          description: "A light, breathable, and incredibly soft square blanket, perfect for welcoming a newborn. Often personalized with embroidered initials and birthdate."
+        },
+        {
+          name: "The Dream-Knit Baby Blanket",
+          description: "A soft, gently knitted blanket perfect for the crib or stroller, with a simple, elegant stitch that is both beautiful and comforting."
+        },
+        {
+          name: "The Featherlight Cellular Blanket",
+          description: "A luxury take on a nursery essential, this cashmere cellular knit provides warmth while ensuring breathability and safety."
+        },
+        {
+          name: "The Personalized Keepsake Blanket",
+          description: "A special blanket featuring knitted-in names, dates, or small motifs like stars or hearts, making it a truly unique and beloved gift."
+        }
+      ]
     },
     {
-      title: "Legacy Baby Clothes",
-      description: "Miniature masterpieces that honor family traditions. Hand-sewn details recreate christening gown elements, incorporate meaningful symbols, or feature delicate pet silhouettes—luxury that grows with your family's story.",
+      title: "Baby Apparel & Gift Sets",
+      description: "A collection of foundational pieces for a baby's first wardrobe, embodying purity and softness in every stitch.",
       image: "photo-1486312338219-ce68d2c6f44d",
-      link: "/creations/baby-clothes", 
-      features: ["Christening Recreations", "Pet Silhouettes", "Family Symbol Integration", "Gentle Hand-Finishing"],
-      investment: "$200 - $650",
-      story: "Every tiny garment carries the weight of family love"
+      link: "/creations/baby-clothes",
+      investment: "$150 - $650",
+      products: [
+        {
+          name: "The Welcome Home Set",
+          description: "The ultimate heirloom gift including a hand-finished cardigan with mother-of-pearl buttons, matching baby booties, and a classic little bonnet."
+        },
+        {
+          name: "The Heirloom Capelet",
+          description: "A beautiful and practical alternative to a coat for special occasions, fastening with a simple ribbon or a single button."
+        },
+        {
+          name: "The Snuggle Romper Suit",
+          description: "A one-piece outfit with simple fastenings, enveloping the baby in head-to-toe cashmere comfort."
+        },
+        {
+          name: "Cashmere Baby Accessories",
+          description: "Soft socks, booties, and tiny mittens designed to stay on little feet and protect delicate skin with incredible warmth."
+        }
+      ]
     }
   ];
 
@@ -44,6 +117,12 @@ const OurCreations = () => {
       {/* Hero Section */}
       <section className="relative py-32 bg-luxury-gradient overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 w-32 h-32 border-2 border-primary/20 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 border border-accent/20 rotate-45"></div>
+          <div className="absolute bottom-20 left-1/4 w-16 h-16 border-2 border-primary/20 rounded-full"></div>
+          <div className="absolute bottom-40 right-1/3 w-20 h-20 border border-accent/20 rotate-12"></div>
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-5xl mx-auto space-y-12">
             <div className="space-y-8">
@@ -96,36 +175,32 @@ const OurCreations = () => {
         </div>
       </section>
 
-      {/* Featured Creations */}
+      {/* Product Collections */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
-            {creations.map((creation, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div className="space-y-4">
+          <div className="space-y-20">
+            {collections.map((collection, index) => (
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className="space-y-6">
                     <h2 className="text-3xl md:text-4xl font-playfair font-bold text-primary">
-                      {creation.title}
+                      {collection.title}
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                      {creation.description}
+                      {collection.description}
                     </p>
-                    <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
-                      <p className="text-primary font-medium text-sm italic">
-                        "{creation.story}"
-                      </p>
+                    <div className="text-2xl font-playfair font-semibold text-primary">
+                      Investment: {collection.investment}
                     </div>
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="text-2xl font-playfair font-semibold text-primary">
-                      Investment: {creation.investment}
-                    </div>
-                    <div className="grid grid-cols-1 gap-3">
-                      {creation.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="text-sm font-medium text-foreground">{feature}</span>
+                    <h3 className="text-xl font-playfair font-semibold text-primary">Our Signature Pieces:</h3>
+                    <div className="space-y-4">
+                      {collection.products.map((product, productIndex) => (
+                        <div key={productIndex} className="bg-card/30 p-4 rounded-lg border-l-4 border-primary/50">
+                          <h4 className="font-semibold text-primary mb-2">{product.name}</h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
                         </div>
                       ))}
                     </div>
@@ -133,22 +208,26 @@ const OurCreations = () => {
                   
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild className="luxury-button">
-                      <Link to={creation.link}>Explore {creation.title}</Link>
+                      <Link to={collection.link}>Explore Collection</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <Link to="/inquiry">Customize This Design</Link>
+                      <Link to="/inquiry">Commission Custom Piece</Link>
                     </Button>
                   </div>
                 </div>
                 
                 <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                  <Card className="luxury-card border-0 overflow-hidden">
-                    <div className="aspect-[4/3]">
+                  <Card className="luxury-card border-0 overflow-hidden relative">
+                    <div className="aspect-[4/3] relative">
                       <img 
-                        src={`https://images.unsplash.com/${creation.image}?w=600&h=450&fit=crop&crop=center`}
-                        alt={creation.title}
+                        src={`https://images.unsplash.com/${collection.image}?w=600&h=450&fit=crop&crop=center`}
+                        alt={collection.title}
                         className="w-full h-full object-cover"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/10"></div>
+                      <div className="absolute bottom-4 right-4 bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg">
+                        <span className="text-sm font-medium">{collection.products.length} Signature Pieces</span>
+                      </div>
                     </div>
                   </Card>
                 </div>
