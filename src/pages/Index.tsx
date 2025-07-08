@@ -13,64 +13,96 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-luxury-gradient">
-        <div className="container mx-auto px-4 py-24 md:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-primary leading-tight">
-                  Your Vision,
+      <section className="relative overflow-hidden bg-luxury-gradient min-h-[90vh] flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8 text-center lg:text-left">
+              <div className="space-y-6">
+                <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium border border-primary/20">
+                  ✨ Artisan-Crafted Luxury Since 2020
+                </div>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-primary leading-tight">
+                  Where
                   <br />
-                  <span className="text-foreground">Our Craft</span>
+                  <span className="text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text">Memory</span>
+                  <br />
+                  Meets Mastery
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-                  Experience the luxury of bespoke cashmere at Cloudspun. Each piece is meticulously handcrafted 
-                  to your unique specifications—from hand embroidery to machine details—creating timeless heirlooms 
-                  that tell your personal story.
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
+                  Transform your most precious memories into luxury cashmere heirlooms. From beloved pet portraits to 
+                  family crests, our master artisans create pieces that carry your soul—one thread at a time.
                 </p>
-                <div className="text-sm text-muted-foreground bg-card/50 p-4 rounded-lg border border-border">
-                  <p className="font-medium text-primary mb-2">Premium Investment Range: $200 - $1,200 USD</p>
-                  <p>Begin your bespoke cashmere journey with a <span className="font-semibold text-primary">$50 USD deposit</span> 
-                  to receive your personalized design proposal and detailed estimate.</p>
+              </div>
+              
+              <div className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-border shadow-lg">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                  <div className="space-y-2">
+                    <div className="text-3xl font-playfair font-bold text-primary">$200-$1,200</div>
+                    <div className="text-sm text-muted-foreground">Investment Range</div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-3xl font-playfair font-bold text-primary">4-6 Weeks</div>
+                    <div className="text-sm text-muted-foreground">Crafting Time</div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-3xl font-playfair font-bold text-primary">Worldwide</div>
+                    <div className="text-sm text-muted-foreground">Shipping</div>
+                  </div>
+                </div>
+                <div className="mt-4 p-3 bg-primary/5 rounded-lg border border-primary/10">
+                  <p className="text-sm text-center text-muted-foreground">
+                    Begin with a <span className="font-semibold text-primary">$50 deposit</span> for your personalized design proposal
+                  </p>
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="luxury-button text-lg px-8 py-6">
-                  <Link to="/inquiry">Begin Your Custom Design</Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button asChild className="luxury-button text-lg px-10 py-6 shadow-lg">
+                  <Link to="/inquiry">Start Your Legacy</Link>
                 </Button>
-                <Button variant="outline" asChild className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg">
-                  <Link to="/process">Discover Our Process</Link>
+                <Button variant="outline" asChild className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-10 py-6 text-lg">
+                  <Link to="/creations">View Masterpieces</Link>
                 </Button>
-                <WhatsAppButton phoneNumber="+919718807399" className="px-8 py-6 text-lg" />
-              </div>
-              
-              <div className="flex items-center space-x-8 text-sm text-muted-foreground">
-                <div className="flex flex-col">
-                  <span className="font-semibold text-primary">4-6 Weeks</span>
-                  <span>Crafting Time</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-semibold text-primary">100%</span>
-                  <span>Custom Made</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-semibold text-primary">Worldwide</span>
-                  <span>Shipping</span>
-                </div>
               </div>
             </div>
             
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-soft-gradient shadow-luxury overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=600&fit=crop&crop=center"
-                  alt="Luxurious cashmere crafting process"
-                  className="w-full h-full object-cover"
-                />
+            <div className="relative lg:order-last">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-luxury group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=500&fit=crop&crop=center"
+                      alt="Pet portrait embroidery"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="aspect-square rounded-2xl overflow-hidden shadow-luxury group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=300&fit=crop&crop=center"
+                      alt="Baby clothes craftsmanship"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-4 mt-8">
+                  <div className="aspect-square rounded-2xl overflow-hidden shadow-luxury group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=300&h=300&fit=crop&crop=center"
+                      alt="Custom baby blankets"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-luxury group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=500&fit=crop&crop=center"
+                      alt="Cashmere crafting detail"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-3xl blur-2xl -z-10"></div>
             </div>
           </div>
         </div>
@@ -135,62 +167,96 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Creations */}
-      <section className="py-24 bg-soft-gradient">
+      {/* Artisan Stories */}
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-playfair font-bold text-primary mb-6">
-              Our Creations
+            <h2 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
+              Stories Woven in Thread
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our portfolio of bespoke cashmere pieces, each one a unique expression of luxury and craftsmanship
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Every thread tells a story. Every stitch preserves a memory. Discover how our artisans transform 
+              your most precious moments into timeless cashmere masterpieces.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {[
               {
-                title: "Bespoke Shawls",
-                description: "Hand-embroidered shawls with your personal designs—beloved pets, family crests, or custom artwork",
-                image: "photo-1581091226825-a6a2a5aee158"
+                title: "Pet Portrait Shawls",
+                subtitle: "Where Love Lives Forever",
+                description: "Isabella Chen spends 20+ hours hand-embroidering your beloved companion's portrait with photo-realistic precision. From rescue dogs to family cats—every pet deserves immortality in cashmere.",
+                price: "$450 - $1,200",
+                image: "photo-1581091226825-a6a2a5aee158",
+                story: "\"When Sarah brought me a photo of her rescue dog Max, I saw more than a pet—I saw 12 years of unconditional love that needed preserving forever.\"",
+                link: "/creations/shawls"
               },
               {
-                title: "Custom Baby Blankets", 
-                description: "Machine and hand-embroidered blankets in cloud-soft cashmere with personalized names and dates",
-                image: "photo-1721322800607-8c38375eef04"
+                title: "Memory Baby Blankets", 
+                subtitle: "First Breaths, Forever Treasures",
+                description: "Transform hospital bracelets, wedding dress lace, or ultrasound photos into ultra-soft cashmere blankets. Our photo-to-thread technology captures every precious detail.",
+                price: "$280 - $850",
+                image: "photo-1721322800607-8c38375eef04",
+                story: "\"Parents bring us their baby's first photo, and we weave that pure love into cashmere that will comfort generations.\"",
+                link: "/creations/baby-blankets"
               },
               {
-                title: "Personalized Baby Clothes",
-                description: "Heirloom-quality garments with traditional craftsmanship and delicate hand-finished details",
-                image: "photo-1486312338219-ce68d2c6f44d"
+                title: "Legacy Baby Clothes",
+                subtitle: "Generational Love, Miniature Masterpieces", 
+                description: "Recreate christening gown details, incorporate family crests, or feature delicate pet silhouettes. Each garment carries the weight of family history.",
+                price: "$200 - $650",
+                image: "photo-1486312338219-ce68d2c6f44d",
+                story: "\"When three generations of a family commissioned matching pieces, I understood we weren't just making clothes—we were creating legacy.\"",
+                link: "/creations/baby-clothes"
               }
             ].map((creation, index) => (
-              <Card key={index} className="luxury-card border-0 overflow-hidden group cursor-pointer hover:shadow-luxury transition-all duration-500">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={`https://images.unsplash.com/${creation.image}?w=400&h=300&fit=crop&crop=center`}
-                    alt={creation.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <CardContent className="p-6 space-y-3">
-                  <h3 className="text-xl font-playfair font-semibold text-primary">
-                    {creation.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {creation.description}
-                  </p>
-                  <Button variant="ghost" className="text-primary hover:text-primary-foreground hover:bg-primary p-0 h-auto font-medium">
-                    Customize This Design →
-                  </Button>
-                </CardContent>
-              </Card>
+              <div key={index} className="group">
+                <Card className="luxury-card border-0 overflow-hidden hover:shadow-luxury transition-all duration-500 h-full">
+                  <div className="aspect-[4/3] overflow-hidden relative">
+                    <img 
+                      src={`https://images.unsplash.com/${creation.image}?w=500&h=400&fit=crop&crop=center`}
+                      alt={creation.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <div className="text-sm font-medium opacity-90">{creation.subtitle}</div>
+                      <div className="text-2xl font-playfair font-bold">{creation.price}</div>
+                    </div>
+                  </div>
+                  <CardContent className="p-8 space-y-6">
+                    <div className="space-y-3">
+                      <h3 className="text-2xl font-playfair font-bold text-primary">
+                        {creation.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {creation.description}
+                      </p>
+                    </div>
+                    
+                    <div className="bg-primary/5 p-4 rounded-lg border-l-4 border-primary">
+                      <p className="text-sm italic text-muted-foreground">
+                        {creation.story}
+                      </p>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <Button asChild className="luxury-button flex-1">
+                        <Link to={creation.link}>Explore Collection</Link>
+                      </Button>
+                      <Button asChild variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                        <Link to="/inquiry">Customize</Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <Button asChild className="luxury-button">
-              <Link to="/creations">View All Creations</Link>
+          <div className="text-center mt-16">
+            <Button asChild className="luxury-button text-lg px-10 py-6">
+              <Link to="/creations">View All Masterpieces</Link>
             </Button>
           </div>
         </div>

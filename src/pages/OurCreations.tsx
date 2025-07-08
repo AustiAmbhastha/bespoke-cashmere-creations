@@ -42,23 +42,55 @@ const OurCreations = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-24 bg-luxury-gradient">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-              Where Memory Becomes Masterpiece
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-              Each creation begins with your story—a beloved pet's portrait hand-embroidered into cashmere, 
-              family crests restored with museum-quality precision, or childhood memories transformed into luxury heirlooms. 
-              This is why discerning clients invest $200-$1,200 in Cloudspun artistry.
-            </p>
-            <div className="bg-card/50 p-6 rounded-lg border border-border">
-              <p className="text-sm text-muted-foreground italic">
-                "When mass-produced luxury feels hollow, our artisans create pieces that carry your soul. 
-                Each stitch tells your story, each thread connects generations."
+      <section className="relative py-32 bg-luxury-gradient overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-5xl mx-auto space-y-12">
+            <div className="space-y-8">
+              <div className="inline-flex items-center bg-primary/10 text-primary px-6 py-3 rounded-full text-sm font-medium border border-primary/20">
+                ✨ Artisan-Crafted Since 2020 • Museum-Quality Precision
+              </div>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-primary leading-tight">
+                Where <span className="text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text">Memories</span>
+                <br />
+                Become Masterpieces
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+                From beloved pets immortalized in cashmere thread to family crests restored with museum-quality precision—
+                discover why discerning collectors invest $200-$1,200 in pieces that carry their soul.
               </p>
-              <p className="mt-2 text-primary font-medium">— Master Artisan Collection</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-border shadow-lg">
+                <div className="text-3xl font-playfair font-bold text-primary mb-2">15-25 Hours</div>
+                <div className="text-sm text-muted-foreground">Per Hand-Embroidered Portrait</div>
+              </div>
+              <div className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-border shadow-lg">
+                <div className="text-3xl font-playfair font-bold text-primary mb-2">Photo-Realistic</div>
+                <div className="text-sm text-muted-foreground">Swiss Precision Threading</div>
+              </div>
+              <div className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-border shadow-lg">
+                <div className="text-3xl font-playfair font-bold text-primary mb-2">Generational</div>
+                <div className="text-sm text-muted-foreground">Heirloom Quality</div>
+              </div>
+            </div>
+            
+            <div className="bg-card/60 backdrop-blur-sm p-8 rounded-2xl border border-border max-w-3xl mx-auto">
+              <p className="text-lg italic text-muted-foreground mb-4">
+                "When clients bring us their rescue dog's photo or grandmother's wedding ring pattern, 
+                we understand we're not just creating luxury—we're preserving souls in cashmere."
+              </p>
+              <p className="text-primary font-medium">— Isabella Chen, Master Pet Portrait Artisan</p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild className="luxury-button text-lg px-10 py-6">
+                <Link to="/inquiry">Commission Your Masterpiece</Link>
+              </Button>
+              <Button variant="outline" asChild className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-10 py-6 text-lg">
+                <Link to="/process">Discover Our Process</Link>
+              </Button>
             </div>
           </div>
         </div>
