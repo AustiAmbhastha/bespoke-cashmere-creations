@@ -56,6 +56,13 @@ const Navigation = ({ mobile = false, onItemClick }: NavigationProps) => {
               Personalized Baby Clothes
             </Link>
             <Link 
+              to="/creations/blankets-throws" 
+              className="block text-muted-foreground hover:text-primary transition-colors"
+              onClick={onItemClick}
+            >
+              Blankets & Throws
+            </Link>
+            <Link 
               to="/creations/gallery" 
               className="block text-muted-foreground hover:text-primary transition-colors"
               onClick={onItemClick}
@@ -179,6 +186,17 @@ const Navigation = ({ mobile = false, onItemClick }: NavigationProps) => {
                     <div className="text-sm font-medium leading-none">Personalized Baby Clothes</div>
                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                       Precious garments for precious moments
+                    </p>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link 
+                    to="/creations/blankets-throws"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  >
+                    <div className="text-sm font-medium leading-none">Blankets & Throws</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                      Luxurious comfort for your home
                     </p>
                   </Link>
                 </NavigationMenuLink>

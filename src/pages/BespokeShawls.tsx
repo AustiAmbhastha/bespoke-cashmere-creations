@@ -47,17 +47,18 @@ const BespokeShawls = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-              Where Beloved Memories Live Forever
+              Bespoke Shawls & Wraps
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-              Your rescue dog's gentle eyes, hand-embroidered with museum-quality precision. Your grandmother's 
-              wedding ring pattern, recreated in golden cashmere thread. Each shawl becomes a wearable sanctuary 
-              of memory, crafted by artisans who understand that luxury isn't about price—it's about preserving souls.
+              Luxury drapes for elegance and warmth, often featuring bespoke embroidery. Each shawl becomes 
+              a wearable sanctuary of memory, crafted by artisans who understand that true luxury lies in 
+              preserving the moments that matter most.
             </p>
             <div className="bg-card/50 p-6 rounded-lg border border-border">
               <p className="text-sm text-muted-foreground italic">
-                "We don't just embroider pets—we capture their spirit. The way Bella tilted her head, 
-                how Max's ears perked up. Every stitch honors the love that made them family."
+                "We don't just embroider designs—we capture souls. Your rescue dog's gentle eyes, 
+                hand-embroidered with museum-quality precision. Your grandmother's wedding ring pattern, 
+                recreated in golden cashmere thread. Every stitch honors the love that made them family."
               </p>
               <p className="mt-2 text-primary font-medium">— Isabella Chen, Pet Portrait Specialist</p>
             </div>
