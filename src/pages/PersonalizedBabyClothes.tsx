@@ -34,61 +34,74 @@ const PersonalizedBabyClothes = () => {
         </div>
       </section>
 
-      {/* Content */}
+      {/* Product Collections */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <Card className="luxury-card border-0 overflow-hidden">
-              <div className="aspect-[4/3]">
-                <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=450&fit=crop&crop=center"
-                  alt="Personalized baby clothes"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </Card>
-            
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-primary">
-                Where Family Legacy Meets Gentle Luxury
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Our master seamstresses recreate great-grandmother's christening gown details in modern comfort, 
-                embroider beloved pet silhouettes with tender precision, or integrate family crests into tiny 
-                garments. Each piece becomes a wearable connection to your family's unique story.
-              </p>
-              <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
-                <p className="text-primary font-medium text-sm italic">
-                  "When families trust us with their most precious memories, we honor that with our finest artistry"
-                </p>
-              </div>
-              <div className="space-y-3">
-                <div className="text-xl font-playfair font-semibold text-primary">
-                  Investment: $200 - $650
+          <div className="space-y-20">
+            {[
+              {
+                name: "The Welcome Home Set (Gift Set)",
+                description: "The ultimate heirloom gift. This curated set includes: A hand-finished Cardigan with mother-of-pearl buttons, A pair of matching Baby Booties, A classic Little Bonnet or Beanie.",
+                investment: "$350 - $650",
+                image: "photo-1486312338219-ce68d2c6f44d"
+              },
+              {
+                name: "The Heirloom Capelet",
+                description: "A beautiful and practical alternative to a coat for special occasions, fastening with a simple ribbon or a single button.",
+                investment: "$200 - $450",
+                image: "photo-1721322800607-8c38375eef04"
+              },
+              {
+                name: "The Snuggle Romper Suit",
+                description: "A one-piece outfit with simple fastenings, enveloping the baby in head-to-toe cashmere comfort.",
+                investment: "$180 - $350",
+                image: "photo-1582562124811-c09040d0a901"
+              },
+              {
+                name: "Cashmere Baby Socks & Booties",
+                description: "Soft, warm, and designed to stay on little feet. Sold separately or in gift sets.",
+                investment: "$150 - $280",
+                image: "photo-1518495973542-4542c06a5843"
+              }
+            ].map((product, index) => (
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className="space-y-4">
+                    <h2 className="text-3xl md:text-4xl font-playfair font-bold text-primary">
+                      {product.name}
+                    </h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      {product.description}
+                    </p>
+                    <div className="text-2xl font-playfair font-semibold text-primary">
+                      Investment: {product.investment}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button asChild className="luxury-button">
+                      <Link to="/inquiry">Customize This Piece</Link>
+                    </Button>
+                    <Button asChild variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                      <Link to="/inquiry">View Full Collection</Link>
+                    </Button>
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm font-medium text-foreground">Christening Gown Recreation</span>
-                  </div>
-                  <div className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm font-medium text-foreground">Pet Portrait Integration</span>
-                  </div>
-                  <div className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm font-medium text-foreground">Family Symbol Embroidery</span>
-                  </div>
-                  <div className="flex items-center space-x-3 bg-card/50 p-3 rounded-lg">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm font-medium text-foreground">Hand-Finished Seams</span>
-                  </div>
+                
+                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+                  <Card className="luxury-card border-0 overflow-hidden relative">
+                    <div className="aspect-[4/3] relative">
+                      <img 
+                        src={`https://images.unsplash.com/${product.image}?w=600&h=450&fit=crop&crop=center`}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/10"></div>
+                    </div>
+                  </Card>
                 </div>
               </div>
-              <Button asChild className="luxury-button">
-                <Link to="/inquiry">Create Legacy Garment</Link>
-              </Button>
-            </div>
+            ))}
           </div>
         </div>
       </section>

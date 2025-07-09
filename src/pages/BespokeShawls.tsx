@@ -8,31 +8,32 @@ import Footer from "@/components/layout/Footer";
 const BespokeShawls = () => {
   const shawlStyles = [
     {
-      name: "Memory Keeper",
-      description: "Where beloved pets live forever in thread. Our artisans spend 15-20 hours hand-embroidering your companion's portrait with photo-realistic precision, capturing the soul behind the eyes that made your heart home.",
-      features: ["Pet Portrait Embroidery", "Hand-Finished Edges", "Swiss Precision Threading", "Generational Heirloom Quality"],
+      name: "The Reversible Heirloom Shawl",
+      description: "A dual-sided masterpiece woven from two complementary shades of cashmere. Incredibly versatile, offering two distinct looks in one.",
+      features: ["Dual-sided Design", "Complementary Color Pairing", "Hand-Finished Edges", "Versatile Styling"],
+      startingPrice: "Investment: $350 - $1,200",
+      image: "photo-1581091226825-a6a2a5aee158"
+    },
+    {
+      name: "The Artisanal Embroidered Shawl",
+      description: "Our signature offering. A classic woven shawl that serves as a canvas for bespoke, hand-guided embroidery, tailored to the client's vision.",
+      features: ["Bespoke Embroidery", "Hand-Guided Artistry", "Custom Design", "Premium Cashmere"],
       startingPrice: "Investment: $450 - $1,200",
-      image: "photo-1581091226825-a6a2a5aee158",
-      story: "From shelter rescues to championship bloodlines—every pet deserves immortality",
-      artisan: "Elena Marchetti specializes in capturing the gentle wisdom in senior dog eyes"
+      image: "photo-1649972904349-6e44c42644a7"
     },
     {
-      name: "Heritage Wrap", 
-      description: "Transform family crests, wedding dress lace, or childhood blanket patterns into luxury cashmere. Our heritage consultants help translate generational treasures into modern masterpieces that honor your lineage.",
-      features: ["Family Crest Restoration", "Wedding Dress Elements", "Generational Pattern Recreation", "Archive-Quality Photography"],
-      startingPrice: "Investment: $350 - $950",
-      image: "photo-1649972904349-6e44c42644a7",
-      story: "When grandmothers pass down more than recipes—they pass down art",
-      artisan: "Isabella Chen specializes in translating family history into textile art"
+      name: "The Featherlight Lace-Knit Shawl",
+      description: "An exquisitely delicate shawl featuring intricate, open-knit patterns. Perfect for temperate evenings or as a sophisticated bridal accessory.",
+      features: ["Open-Knit Patterns", "Delicate Construction", "Bridal Suitable", "Intricate Design"],
+      startingPrice: "Investment: $400 - $850",
+      image: "photo-1486312338219-ce68d2c6f44d"
     },
     {
-      name: "Celebration Shawl",
-      description: "Mark life's sacred moments with artisanal luxury. Hand-embroidered birth flowers, anniversary dates, or memorial symbols using traditional techniques perfected over centuries by master craftspeople.",
-      features: ["Birth Flower Embroidery", "Sacred Date Integration", "Memorial Symbol Work", "Ceremonial Presentation"],
-      startingPrice: "Investment: $500 - $1,500",
-      image: "photo-1486312338219-ce68d2c6f44d",
-      story: "Some moments are too precious for mass production",
-      artisan: "Marcus Aberdeen combines machine precision with hand-finished soul"
+      name: "The Signature Pashmina Stole",
+      description: "A timeless, generously sized wrap made from the finest pashmina cashmere, finished with hand-twisted tassels.",
+      features: ["Finest Pashmina", "Generous Size", "Hand-Twisted Tassels", "Timeless Design"],
+      startingPrice: "Investment: $350 - $750",
+      image: "photo-1526374965328-7f61d4dc18c5"
     }
   ];
 

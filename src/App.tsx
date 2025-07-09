@@ -7,6 +7,7 @@ import FloatingWhatsApp from "@/components/ui/floating-whatsapp";
 import Index from "./pages/Index";
 import OurCreations from "./pages/OurCreations";
 import BespokeShawls from "./pages/BespokeShawls";
+import BlanketsThrows from "./pages/BlanketsTrows";
 import CustomBabyBlankets from "./pages/CustomBabyBlankets";
 import PersonalizedBabyClothes from "./pages/PersonalizedBabyClothes";
 import InspirationGallery from "./pages/InspirationGallery";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/creations" element={<OurCreations />} />
           <Route path="/creations/shawls" element={<BespokeShawls />} />
+          <Route path="/creations/blankets" element={<BlanketsThrows />} />
           <Route path="/creations/baby-blankets" element={<CustomBabyBlankets />} />
           <Route path="/creations/baby-clothes" element={<PersonalizedBabyClothes />} />
           <Route path="/creations/gallery" element={<InspirationGallery />} />
