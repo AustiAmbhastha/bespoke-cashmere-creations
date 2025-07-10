@@ -1,4 +1,5 @@
-import { Mail } from "lucide-react";
+import { Mail, Globe, DollarSign } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const TopHeader = () => {
   return (
@@ -9,6 +10,34 @@ const TopHeader = () => {
           <span className="hidden md:inline font-light">Handcrafted with Love</span>
         </div>
         <div className="flex items-center space-x-4">
+          {/* Currency Switcher */}
+          <Select defaultValue="usd">
+            <SelectTrigger className="w-20 h-8 bg-transparent border-primary-foreground/20 text-primary-foreground text-xs">
+              <DollarSign className="h-3 w-3" />
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="usd">USD</SelectItem>
+              <SelectItem value="eur">EUR</SelectItem>
+              <SelectItem value="gbp">GBP</SelectItem>
+              <SelectItem value="cad">CAD</SelectItem>
+            </SelectContent>
+          </Select>
+
+          {/* Language Switcher */}
+          <Select defaultValue="en">
+            <SelectTrigger className="w-16 h-8 bg-transparent border-primary-foreground/20 text-primary-foreground text-xs">
+              <Globe className="h-3 w-3" />
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="en">EN</SelectItem>
+              <SelectItem value="fr">FR</SelectItem>
+              <SelectItem value="es">ES</SelectItem>
+              <SelectItem value="de">DE</SelectItem>
+            </SelectContent>
+          </Select>
+
           <a 
             href="mailto:hello@cloudspuncashmere.com" 
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
