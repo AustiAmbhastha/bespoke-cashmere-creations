@@ -72,6 +72,18 @@ const Footer = () => {
               >
                 Cashmere Care Guide
               </Link>
+              <Link 
+                to="/privacy" 
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                to="/return-refund" 
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"
+              >
+                Return & Refund
+              </Link>
             </nav>
           </div>
 
