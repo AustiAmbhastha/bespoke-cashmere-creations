@@ -7,6 +7,10 @@ const TopHeader = () => {
   const { currency, setCurrency } = useCurrency();
   const [language, setLanguage] = useState("EN");
 
+  const handleCurrencyChange = (value: string) => {
+    setCurrency(value.toUpperCase());
+  };
+
   const handleLanguageChange = (value: string) => {
     setLanguage(value.toUpperCase());
     localStorage.setItem('selectedLanguage', value.toUpperCase());
@@ -15,7 +19,9 @@ const TopHeader = () => {
   // Load saved language preference
   useEffect(() => {
     const savedLanguage = localStorage.getItem('selectedLanguage');
-    if (savedLanguage) setLanguage(savedLanguage);
+    if (savedLanguage && ['EN', 'FR', 'ES', 'DE'].includes(savedLanguage)) {
+      setLanguage(savedLanguage);
+    }
   }, []);
 
   return (
@@ -38,7 +44,7 @@ const TopHeader = () => {
           <div className="h-4 w-px bg-primary-foreground/20 hidden md:block"></div>
           
           {/* Currency Switcher */}
-          <Select value={currency.toLowerCase()} onValueChange={setCurrency}>
+          <Select value={currency?.toLowerCase() || "usd"} onValueChange={handleCurrencyChange}>
             <SelectTrigger className="w-20 h-7 bg-transparent border-primary-foreground/20 text-primary-foreground text-xs hover:bg-primary-foreground/10">
               <DollarSign className="h-3 w-3" />
               <SelectValue />

@@ -52,7 +52,9 @@ export const CurrencyProvider: React.FC<CurrencyProviderProps> = ({ children }) 
   // Load saved currency preference
   useEffect(() => {
     const savedCurrency = localStorage.getItem('selectedCurrency');
-    if (savedCurrency) setCurrencyState(savedCurrency);
+    if (savedCurrency && ['USD', 'EUR', 'GBP', 'CAD'].includes(savedCurrency)) {
+      setCurrencyState(savedCurrency);
+    }
   }, []);
 
   const setCurrency = (newCurrency: string) => {
