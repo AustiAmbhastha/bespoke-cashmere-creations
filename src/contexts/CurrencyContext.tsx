@@ -32,14 +32,22 @@ export const CurrencyProvider: React.FC<CurrencyProviderProps> = ({ children }) 
   });
 
   useEffect(() => {
-    // Fetch exchange rates from a free API
+    // Fetch exchange rates with fallback
     const fetchExchangeRates = async () => {
       try {
-        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+        // Use a more reliable API with fallback
+        const response = await fetch('https://open.er-api.com/v6/latest/USD');
+        if (!response.ok) throw new Error('API request failed');
+        
         const data = await response.json();
-        setExchangeRates(data.rates);
+        if (data.rates) {
+          setExchangeRates(data.rates);
+        } else {
+          throw new Error('Invalid API response');
+        }
       } catch (error) {
         console.error('Failed to fetch exchange rates:', error);
+        // Use static fallback rates - keep existing ones
       }
     };
 
