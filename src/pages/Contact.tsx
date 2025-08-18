@@ -1,12 +1,29 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import TopHeader from "@/components/layout/TopHeader";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { useContactForm, ContactFormData } from "@/hooks/useContactForm";
 
 const Contact = () => {
+  const { handleSubmit, isSubmitting } = useContactForm();
+  const [formData, setFormData] = useState<ContactFormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: ""
+  });
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const success = await handleSubmit(formData);
+    if (success) {
+      setFormData({ firstName: "", lastName: "", email: "", message: "" });
+    }
+  };
   return (
     <div className="min-h-screen bg-background">
       <TopHeader />
@@ -112,12 +129,15 @@ const Contact = () => {
                       Have a quick question? Send us a message and we'll get back to you soon.
                     </p>
                     
-                    <form className="space-y-4">
+                    <form onSubmit={onSubmit} className="space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <input
                             type="text"
                             placeholder="First Name"
+                            value={formData.firstName}
+                            onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
+                            required
                             className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
                           />
                         </div>
@@ -125,6 +145,9 @@ const Contact = () => {
                           <input
                             type="text"
                             placeholder="Last Name"
+                            value={formData.lastName}
+                            onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
+                            required
                             className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
                           />
                         </div>
@@ -134,6 +157,9 @@ const Contact = () => {
                         <input
                           type="email"
                           placeholder="Email Address"
+                          value={formData.email}
+                          onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                          required
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
                         />
                       </div>
@@ -142,12 +168,19 @@ const Contact = () => {
                         <textarea
                           placeholder="Your Message"
                           rows={4}
+                          value={formData.message}
+                          onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                          required
                           className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none"
                         />
                       </div>
                       
-                      <Button type="submit" className="luxury-button w-full">
-                        Send Message
+                      <Button 
+                        type="submit" 
+                        disabled={isSubmitting}
+                        className="luxury-button w-full"
+                      >
+                        {isSubmitting ? "Sending..." : "Send Message"}
                       </Button>
                     </form>
                   </div>
